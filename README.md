@@ -19,3 +19,8 @@ sudo vi /etc/sysconfig/network-scripts/ifcfg-ens33
 
 对虚拟机内存扩容
 https://blog.51cto.com/u_15266039/4967469
+
+
+#Supervisor安装
+yum install epel-release
+yum install -y supervisor
