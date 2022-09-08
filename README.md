@@ -24,3 +24,8 @@ https://blog.51cto.com/u_15266039/4967469
 #Supervisor安装
 yum install epel-release
 yum install -y supervisor
+
+修改/etc/supervisord.conf
+
+关闭防火墙
+systemctl stop firewalld.service
