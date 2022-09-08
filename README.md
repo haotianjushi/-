@@ -55,19 +55,19 @@ ps aux | grep supervisord
 
 配置以systemd的方式管理
 vi /etc/rc.d/init.d/supervisord
-> #!/bin/sh  
-> #  
-> # /etc/init.d/supervisord  
-> #  
-> # Supervisor is a client/server system that  
-> # allows its users to monitor and control a  
-> # number of processes on UNIX-like operating  
-> # systems.  
-> #  
-> # chkconfig: - 64 36  
-> # description: Supervisor Server  
-> # processname: supervisord  
-> # Source init functions  
+> \#!/bin/sh  
+> \#  
+> \# /etc/init.d/supervisord  
+> \#  
+> \# Supervisor is a client/server system that  
+> \# allows its users to monitor and control a  
+> \# number of processes on UNIX-like operating  
+> \# systems.  
+> \#  
+> \# chkconfig: - 64 36  
+> \# description: Supervisor Server  
+> \# processname: supervisord  
+> \# Source init functions  
 > . /etc/init.d/functions  
 > prog="supervisord"  
 > prefix="/usr"  
@@ -84,7 +84,7 @@ vi /etc/rc.d/init.d/supervisord
 > stop()  
 > {  
 >        echo -n $"Shutting down $prog: "  
->        [ -f $PIDFILE ] && killproc $prog || success $"$prog shutdown"  
+>        [ -f \$PIDFILE ] \&\& killproc $prog \|\| success $"$prog shutdown"  
 >        echo  
 > }  
 > case "$1" in  
